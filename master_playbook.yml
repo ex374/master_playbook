@@ -13,4 +13,4 @@
    - name: copy the contents to index.html
      copy:
        content: "{{CONTENT}}"
-       dest: "{{DIRECTORY}}/{{FILE}}"
+       dest: "{{FILE}}"
