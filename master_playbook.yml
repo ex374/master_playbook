@@ -1,0 +1,16 @@
+---
+- name: Creating variables
+  hosts: all
+  tasks:
+   - name: create a directory
+     file: 
+       path: "{{DIRECTORY}}"
+       state: directory
+   - name: create a file
+     file:
+       path: "{{FILE}}"
+       state: touch
+   - name: copy the contents to index.html
+     copy:
+       content: "{{CONTENT}}"
+       dest: "{{DIRECTORY}}/{{FILE}}"
